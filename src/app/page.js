@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-black text-white selection:bg-white/20 overflow-x-hidden">
             <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                <header className="flex items-center justify-between px-3 pr-6 md:pr-3 pl-6 py-3 bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full md:w-full max-w-3xl shadow-2xl">
+                <header className="flex items-center justify-between px-3 pr-6 md:pr-3 pl-6 h-[60px] bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full md:w-full max-w-3xl shadow-2xl">
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="relative w-8 h-8 rounded-[5px] overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow">
                             <Image

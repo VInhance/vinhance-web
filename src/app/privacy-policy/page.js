@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-white/20 pb-20 overflow-x-hidden">
             <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                <header className="flex items-center justify-between px-4 md:px-6 py-3 bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-3xl shadow-2xl">
+                <header className="flex items-center justify-between px-4 md:px-6 h-[60px] bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-3xl shadow-2xl">
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="relative w-8 h-8 rounded-[5px] overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow">
                             <Image
@@ -126,21 +126,28 @@ export default function PrivacyPolicy() {
                         <ul className="list-disc pl-6 mt-6 space-y-4">
                             <li>
                                 <strong className="text-white">
-                                    Host Permissions:
+                                    Host Permissions (Web History):
                                 </strong>{" "}
-                                Directed only to VTOP domains (e.g.,
-                                vtop.vit.ac.in, vtopcc.vit.ac.in,
-                                vtop.vitbhopal.ac.in, vtop.vitap.ac.in) to
-                                inject scripts that improve the UI and extract
-                                data for local calculators.
+                                Browsing history warnings appear because we redirect network requests to access specific VTOP pages (Timetable, Marks) to safely extract grades and class schedules. We only have access to VTOP domains.
                             </li>
                             <li>
                                 <strong className="text-white">
-                                    Identity:
+                                    Downloads:
+                                </strong>{" "}
+                                Used exclusively to intercept the downloads from VTOP (Syllabus, Assignments) and automatically rename them and place them into neatly organized folders.
+                            </li>
+                            <li>
+                                <strong className="text-white">
+                                    Identity & Email:
                                 </strong>{" "}
                                 Required purely to authenticate you with Google
-                                for calendar sync features if you choose to
-                                enable them.
+                                for calendar sync features and briefly fetch your email to display a successful sign-in notification.
+                            </li>
+                            <li>
+                                <strong className="text-white">
+                                    Notifications:
+                                </strong>{" "}
+                                Used to display non-intrusive popup alerts when you successfully log in or log out of Google Calendar sync.
                             </li>
                         </ul>
                     </section>
