@@ -1,0 +1,36 @@
+.
+├── README.md
+├── eslint.config.mjs
+├── folder_structure.txt
+├── jsconfig.json
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── assets
+│   │   ├── footer
+│   │   │   ├── lucknow.jpg
+│   │   │   ├── prayagraj.jpg
+│   │   │   └── raiganj.jpg
+│   │   └── product
+│   │       ├── attendance.png
+│   │       ├── captcha.png
+│   │       ├── cgpa.png
+│   │       ├── hero.jpg
+│   │       └── marks.png
+│   ├── favicon.ico
+│   └── logo_main.jpeg
+├── src
+│   └── app
+│       ├── globals.css
+│       ├── icon.jpeg
+│       ├── layout.js
+│       ├── page.js
+│       ├── privacy-policy
+│       │   └── page.js
+│       └── terms-of-use
+│           └── page.js
+└── tailwind.config.js
+
+9 directories, 25 files

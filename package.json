@@ -1,0 +1,27 @@
+{
+    "name": "vinhance",
+    "version": "1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@vercel/analytics": "^1.6.1",
+        "geist": "^1.7.0",
+        "lucide-react": "^0.575.0",
+        "next": "16.1.6",
+        "react": "19.2.3",
+        "react-dom": "19.2.3"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4",
+        "eslint": "^9",
+        "eslint-config-next": "16.1.6",
+        "prettier": "^3.8.1",
+        "tailwindcss": "^4"
+    }
+}
