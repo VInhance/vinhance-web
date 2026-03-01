@@ -28,6 +28,7 @@
 - **🕒 Last Posted Attendance:** Track latest attendance patterns.
     - Shows most recent attendance date for each course.
     - Displays last 3 statuses with color coding (P/Green, A/Red, O/Orange).
+    - Includes a **Detailed View Toggle** for a vertically stacked timeline display (`Date - Status`).
     - Automatic updates with loading indicators.
 - **📝 On-Duty Tracking:** Comprehensive OD summary with smart analysis.
     - Chronological list of all OD entries with dates and times.
@@ -53,7 +54,6 @@
 
 ### 📅 Calendar & Schedule Management
 
-- **🔄 Time Table Sync:** Automatically sync your class schedule to Google Calendar.
 - **🗓️ Exam Schedule Sync:** Sync exam dates and venues to your calendar.
 - **🎨 Enhanced Styling:** Color-coded calendar (🟢 classes, 🔴 holidays, 🟠 exams).
 - **📍 Today Highlighting:** Current date automatically highlighted in calendar view.
@@ -90,7 +90,7 @@
 
 - **Attendance Management:** Navigate to "Class Attendance" in VTOP to view the enhanced table with calculators. Use **Future % Calculator** to project attendance, **Target % Calculator** to find classes needed, and click **Check OD** for a comprehensive summary. Toggle column visibility using Show/Hide controls.
 - **Marks Analysis:** Visit "Marks View" in VTOP for the enhanced marks table showing passing requirements, weightage analysis, and color-coded indicators.
-- **Calendar Sync:** Use the extension popup to sign in to Google, then navigate to Time Table or Exam Schedule in VTOP to sync events.
+- **Calendar Sync:** Use the extension popup to sign in to Google, then navigate to Exam Schedule in VTOP to sync events.
 - **Privacy Controls:** The CGPA is automatically hidden on the home page for your privacy.
 
 ---
@@ -128,7 +128,7 @@ VInhance is built for Chromium-based browsers. It works perfectly on:
 | Issue                                 | Solution                                                                                                                        |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | **Extension isn't loading**           | Refresh the VTOP page. Check if you're on a supported campus URL and ensure the extension is enabled in `chrome://extensions/`. |
-| **Calendar Sync fails**               | Open the extension popup, sign out and sign back in to Google. Check your Chrome calendar permissions and internet connection.  |
+| **Exam Calendar Sync fails**          | Open the extension popup, sign out and sign back in to Google. Check your Chrome calendar permissions and internet connection.  |
 | **Incorrect Attendance calculations** | Refresh the attendance page, confirm you're viewing the correct semester, and ensure all attendance data has fully loaded.      |
 
 > Most of the issues should get fixed upon refreshing.
