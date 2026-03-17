@@ -1,11 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-    CheckCircle2,
-    Shield,
-    BarChart3,
-    Settings2,
-} from "lucide-react";
+import { CheckCircle2, Shield, BarChart3, Settings2 } from "lucide-react";
 
 const CHROME_WEBSTORE_URL =
     "https://chromewebstore.google.com/detail/vinhance/kdpkhnlloacadjadmepfnpdliglafaaf";
@@ -101,7 +96,8 @@ export default function Home() {
                             />
                         </Link>
                         <p className="text-xs md:text-sm text-neutral-400 font-medium text-center leading-snug max-w-[460px]">
-                            Add to Chrome (or Brave, Edge, any Chromium browser). It's free.
+                            Add to Chrome (or Brave, Edge, or any Chromium
+                            browser). It's free.
                         </p>
                     </div>
                 </section>

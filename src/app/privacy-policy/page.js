@@ -128,26 +128,37 @@ export default function PrivacyPolicy() {
                                 <strong className="text-white">
                                     Host Permissions (Web History):
                                 </strong>{" "}
-                                Browsing history warnings appear because we redirect network requests to access specific VTOP pages (Timetable, Marks) to safely extract grades and class schedules. We only have access to VTOP domains.
+                                Browsing history warnings appear because we
+                                redirect network requests to access specific
+                                VTOP pages (Timetable, Marks) to safely extract
+                                grades and class schedules. We only have access
+                                to VTOP domains.
                             </li>
                             <li>
                                 <strong className="text-white">
                                     Downloads:
                                 </strong>{" "}
-                                Used exclusively to intercept the downloads from VTOP (Syllabus, Assignments) and automatically rename them and place them into neatly organized folders.
+                                Used exclusively to intercept the downloads from
+                                VTOP (Syllabus, Assignments) and automatically
+                                rename them and place them into neatly organized
+                                folders.
                             </li>
                             <li>
                                 <strong className="text-white">
                                     Identity & Email:
                                 </strong>{" "}
                                 Required purely to authenticate you with Google
-                                for calendar sync features and briefly fetch your email to display a successful sign-in notification.
+                                for calendar sync features and briefly fetch
+                                your email to display a successful sign-in
+                                notification.
                             </li>
                             <li>
                                 <strong className="text-white">
                                     Notifications:
                                 </strong>{" "}
-                                Used to display non-intrusive popup alerts when you successfully log in or log out of Google Calendar sync.
+                                Used to display non-intrusive popup alerts when
+                                you successfully log in or log out of Google
+                                Calendar sync.
                             </li>
                         </ul>
                     </section>
