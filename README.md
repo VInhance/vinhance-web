@@ -124,7 +124,7 @@ VInhance is built for Chromium-based browsers. It works perfectly on:
   <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" alt="Opera" />
 </p>
 
-> ⚠️ Mozilla Firefox and Apple Safari are not supported because they use different extension systems
+> ⚠️ Mozilla Firefox and Apple Safari are not supported because they use different extension systems.
 
 ---
 
