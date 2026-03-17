@@ -1,12 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-    Download,
     CheckCircle2,
     Shield,
     BarChart3,
     Settings2,
 } from "lucide-react";
+
+const CHROME_WEBSTORE_URL =
+    "https://chromewebstore.google.com/detail/vinhance/kdpkhnlloacadjadmepfnpdliglafaaf";
+const CHROME_WEBSTORE_BADGE = "/assets/chrome-web-store-badge.png";
 
 export default function Home() {
     return (
@@ -48,12 +51,20 @@ export default function Home() {
                         </Link>
                     </nav>
 
-                    <button
-                        disabled
-                        className="hidden md:block bg-white/10 hover:bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors cursor-not-allowed"
+                    <Link
+                        href={CHROME_WEBSTORE_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hidden md:inline-flex items-center justify-center bg-white rounded-full px-2 pr-1 py-1 hover:scale-105 transition-transform"
                     >
-                        Soon!
-                    </button>
+                        <Image
+                            src={CHROME_WEBSTORE_BADGE}
+                            alt="Get VInhance on Chrome Web Store"
+                            width={112}
+                            height={34}
+                            className="h-auto w-[112px]"
+                        />
+                    </Link>
                 </header>
             </div>
 
@@ -73,13 +84,25 @@ export default function Home() {
                         life, perfectly organized.
                     </p>
 
-                    <div className="flex flex-col items-center gap-4">
-                        <button
-                            disabled
-                            className="flex items-center justify-center gap-2 md:gap-3 bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-lg font-bold hover:scale-105 transition-transform cursor-not-allowed w-full md:w-auto"
+                    <div className="flex flex-col items-center gap-4 cursor-pointer">
+                        <Link
+                            href={CHROME_WEBSTORE_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center bg-white rounded-full pl-5.5 pr-4 py-0 hover:scale-105 transition-transform w-full md:w-auto"
                         >
-                            <span>Soon!</span>
-                        </button>
+                            <Image
+                                src={CHROME_WEBSTORE_BADGE}
+                                alt="Get VInhance on Chrome Web Store"
+                                width={220}
+                                height={66}
+                                priority
+                                className="h-auto w-[200px] md:w-[220px]"
+                            />
+                        </Link>
+                        <p className="text-xs md:text-sm text-neutral-400 font-medium text-center leading-snug max-w-[460px]">
+                            Add to Chrome (or Brave, Edge, any Chromium browser). It's free.
+                        </p>
                     </div>
                 </section>
 
@@ -258,12 +281,12 @@ export default function Home() {
                     <div className="grid grid-cols-2 md:flex md:flex-row gap-x-8 gap-y-10 md:gap-20 text-left w-full md:w-auto mt-2 md:mt-0">
                         <div className="flex flex-col gap-4 md:gap-5 text-sm font-medium text-neutral-500">
                             <Link
-                                href="/"
+                                href={CHROME_WEBSTORE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="hover:text-white transition-colors"
                             >
                                 Chrome Web Store
-                                <br />
-                                (Soon!)
                             </Link>
                         </div>
 

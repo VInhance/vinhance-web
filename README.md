@@ -12,6 +12,14 @@
     VInhance is a powerful Chrome extension designed to make VTOP more feature-rich for students across all VIT campuses. The extension provides insights on attendance, marks, and schedules directly to your browser.
 </p>
 
+<p>
+    <a href="https://chromewebstore.google.com/detail/vinhance/kdpkhnlloacadjadmepfnpdliglafaaf" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.shields.io/badge/Chrome%20Web%20Store-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white" alt="Get VInhance on Chrome Web Store" />
+    </a>
+</p>
+
+> Add to Chrome (or Brave, Edge, or any Chromium browser). It's free.
+
 ---
 
 ## ✨ Features
@@ -76,13 +84,10 @@
 
 ## 🛠️ Installation
 
-### Quick Setup
-
-1. **Download the code:** Download the ZIP file of this repository and extract it to a folder.
-2. **Open Extensions:** Go to `chrome://extensions/` in your Chrome browser.
-3. **Enable Developer Mode:** Toggle the switch in the top right corner.
-4. **Load Extension:** Click **"Load unpacked"** and select the extracted `VInhance` folder.
-5. **Done!** Log into VTOP and experience the enhancements.
+1. Download VInhance from the [Chrome Web Store](https://chromewebstore.google.com/detail/vinhance/kdpkhnlloacadjadmepfnpdliglafaaf).
+2. Click **Add to Chrome**.
+3. Confirm the installation prompt.
+4. Open VTOP and start using VInhance.
 
 ---
 
