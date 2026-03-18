@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CheckCircle2, Shield, BarChart3, Settings2 } from "lucide-react";
+import { CheckCircle2, Shield, BarChart3, Settings2, Zap } from "lucide-react";
 
 const CHROME_WEBSTORE_URL =
     "https://chromewebstore.google.com/detail/vinhance/kdpkhnlloacadjadmepfnpdliglafaaf";
@@ -9,65 +9,11 @@ const CHROME_WEBSTORE_BADGE = "/assets/chrome-web-store-badge.png";
 export default function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-black text-white selection:bg-white/20 overflow-x-hidden">
-            <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                <header className="flex items-center justify-between px-3 pr-6 md:pr-3 pl-6 h-[60px] bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full md:w-full max-w-3xl shadow-2xl">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-8 h-8 rounded-[5px] overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow">
-                            <Image
-                                src="/logo_main.jpeg"
-                                alt="VInhance Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <span className="font-semibold text-lg tracking-tight">
-                            VInhance
-                        </span>
-                    </Link>
-
-                    <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
-                        <Link
-                            href="#features"
-                            className="hover:text-white transition-colors"
-                        >
-                            Features
-                        </Link>
-                        <Link
-                            href="/privacy-policy"
-                            className="hover:text-white transition-colors"
-                        >
-                            Privacy
-                        </Link>
-                        <Link
-                            href="/terms-of-use"
-                            className="hover:text-white transition-colors"
-                        >
-                            Terms
-                        </Link>
-                    </nav>
-
-                    <Link
-                        href={CHROME_WEBSTORE_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:inline-flex items-center justify-center bg-white rounded-full px-2 pr-1 py-1 hover:scale-105 transition-transform"
-                    >
-                        <Image
-                            src={CHROME_WEBSTORE_BADGE}
-                            alt="Get VInhance on Chrome Web Store"
-                            width={112}
-                            height={34}
-                            className="h-auto w-[112px]"
-                        />
-                    </Link>
-                </header>
-            </div>
-
             <main className="flex-1 w-full flex flex-col items-center">
-                <section className="pt-48 pb-24 px-4 w-full max-w-5xl mx-auto text-center flex flex-col items-center relative z-10">
+                <section className="pt-32 md:pt-48 pb-24 px-4 w-full max-w-5xl mx-auto text-center flex flex-col items-center relative z-10">
                     <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
 
-                    <h1 className="text-6xl md:text-[7rem] font-bold tracking-tighter leading-[1.05] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 mb-8 pr-2 pl-1 pb-2">
+                    <h1 className="text-5xl md:text-[7rem] font-bold tracking-tighter leading-[1.05] text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 mb-8 pr-2 pl-1 pb-2">
                         Make VTOP
                         <br />
                         useful.
@@ -84,7 +30,7 @@ export default function Home() {
                             href={CHROME_WEBSTORE_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center bg-white rounded-full pl-5.5 pr-4 py-0 hover:scale-105 transition-transform w-full md:w-auto"
+                            className="flex items-center justify-center bg-white rounded-full pl-5.5 pr-4 py-0 hover:scale-105 transition-transform md:w-auto"
                         >
                             <Image
                                 src={CHROME_WEBSTORE_BADGE}
@@ -108,7 +54,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_var(--tw-gradient-stops))] from-indigo-500/10 via-transparent to-transparent pointer-events-none"></div>
 
                         <Image
-                            src="/assets/product/hero.jpg"
+                            src="/assets/product/hero.webp"
                             alt="VInhance Interface Preview"
                             fill
                             className="object-cover object-top opacity-60 group-hover:opacity-80 transition-opacity duration-700"
@@ -136,27 +82,27 @@ export default function Home() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
-                        <div className="lg:col-span-2 bg-[#111] rounded-[2rem] p-10 flex flex-col justify-between border border-white/5 relative overflow-hidden group">
+                        <div className="lg:col-span-2 bg-[#111] rounded-[2.5rem] p-8 md:p-10 border border-white/5 relative overflow-hidden group min-h-[380px] flex flex-col justify-between">
                             <div className="absolute right-0 top-0 w-96 h-96 bg-indigo-500/10 blur-[80px] rounded-full translate-x-1/2 -translate-y-1/2 group-hover:bg-indigo-500/20 transition-colors"></div>
 
-                            <div className="flex flex-col md:flex-row justify-between items-start mb-16 relative z-10 w-full min-h-[160px] gap-8 md:gap-0">
-                                <BarChart3 className="w-12 h-12 text-indigo-400 shrink-0" />
-
-                                <div className="w-full max-w-[280px] md:w-[280px] h-48 md:h-[220px] self-center md:self-auto rounded-2xl border border-white/10 bg-white/5 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl mt-4 md:mt-0 shrink-0">
+                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 relative z-10">
+                                <BarChart3 className="w-12 h-12 text-indigo-400" />
+                                <div className="rounded-2xl relative w-fit border border-white/5 shadow-2xl shrink-0">
                                     <Image
-                                        src="/assets/product/attendance.png"
+                                        src="/assets/product/attendance.webp"
                                         alt="Smart Attendance UI"
-                                        fill
-                                        className="object-cover object-top scale-105 group-hover:scale-[1.15] transition-transform duration-500"
+                                        width={240}
+                                        height={160}
+                                        className="w-[200px] md:w-[240px] h-auto block rounded-2xl"
                                     />
                                 </div>
                             </div>
 
-                            <div className="relative z-10">
-                                <h3 className="text-3xl font-bold mb-3 tracking-tight">
+                            <div className="relative z-10 pt-8">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
                                     Smart Attendance.
                                 </h3>
-                                <p className="text-lg text-neutral-400 font-medium leading-relaxed">
+                                <p className="text-lg text-neutral-400 font-medium leading-relaxed max-w-2xl">
                                     Never worry about the 75% rule again. We
                                     calculate exactly how many classes you can
                                     skip across Theory and Lab, with real-time
@@ -166,23 +112,24 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="bg-[#111] rounded-[2rem] p-10 flex flex-col justify-between border border-white/5 group hover:bg-[#161616] transition-colors relative overflow-hidden">
-                            <Shield className="w-12 h-12 text-emerald-400 mb-8" />
+                        <div className="bg-[#111] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 group hover:bg-[#161616] transition-colors relative overflow-hidden min-h-[440px]">
+                            <Shield className="w-12 h-12 text-emerald-400 mb-4" />
 
-                            <div className="w-full h-32 mt-4 mb-8 rounded-2xl border border-white/10 bg-white/5 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl">
+                            <div className="rounded-2xl overflow-hidden relative w-fit border border-white/5 shadow-2xl shrink-0 my-4 flex items-center justify-center bg-black/20">
                                 <Image
-                                    src="/assets/product/cgpa.png"
-                                    alt="Hidden Grades Preview"
-                                    fill
-                                    className="object-cover object-center scale-105 group-hover:scale-[1.15] transition-transform duration-500"
+                                    src="/assets/product/cgpa.webp"
+                                    alt="Privacy Preview"
+                                    width={240}
+                                    height={160}
+                                    className="w-[200px] md:w-[240px] h-auto block rounded-2xl"
                                 />
                             </div>
 
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold mb-2 tracking-tight">
+                            <div className="relative z-10 pt-4">
+                                <h3 className="text-2xl font-bold tracking-tight mb-3">
                                     Absolute Privacy.
                                 </h3>
-                                <p className="text-neutral-400 font-medium">
+                                <p className="text-neutral-400 font-medium leading-relaxed">
                                     Your data never leaves your browser. Hide
                                     your CGPA with one click when opening VTOP
                                     in public.
@@ -190,64 +137,104 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="bg-[#111] rounded-[2rem] p-10 flex flex-col justify-between border border-white/5 group hover:bg-[#161616] transition-colors relative overflow-hidden">
-                            <Settings2 className="w-12 h-12 text-blue-400 mb-8" />
+                        <div className="bg-[#111] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 group hover:bg-[#161616] transition-colors relative overflow-hidden min-h-[440px]">
+                            <Zap className="w-12 h-12 text-yellow-500 mb-4" />
 
-                            <div className="w-full h-32 mt-4 mb-8 rounded-2xl border border-white/10 bg-white/5 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl">
+                            <div className="rounded-2xl overflow-hidden relative w-fit border border-white/5 shadow-2xl shrink-0 my-4 flex items-center justify-center bg-black/20">
                                 <Image
-                                    src="/assets/product/captcha.png"
-                                    alt="Quality of Life Feature"
-                                    fill
-                                    className="object-cover object-center scale-105 group-hover:scale-[1.15] transition-transform duration-500"
+                                    src="/assets/product/captcha.webp"
+                                    alt="Captcha Preview"
+                                    width={240}
+                                    height={160}
+                                    className="w-[200px] md:w-[240px] h-auto block rounded-2xl"
                                 />
                             </div>
 
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-bold mb-2 tracking-tight">
+                            <div className="relative z-10 pt-4">
+                                <h3 className="text-2xl font-bold tracking-tight mb-3">
                                     Quality of Life.
                                 </h3>
-                                <p className="text-neutral-400 font-medium">
+                                <p className="text-neutral-400 font-medium leading-relaxed">
                                     Auto-solve captchas instantly. Download full
                                     course materials with just one click.
                                 </p>
                             </div>
                         </div>
 
-                        <div className="lg:col-span-2 bg-[#111] rounded-[2rem] p-10 flex flex-col justify-between border border-white/5 relative overflow-hidden group">
+                        <div className="lg:col-span-2 bg-[#111] rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-between border border-white/5 relative overflow-hidden group min-h-[380px]">
                             <div className="absolute left-0 bottom-0 w-96 h-96 bg-purple-500/10 blur-[80px] rounded-full -translate-x-1/2 translate-y-1/2 group-hover:bg-purple-500/20 transition-colors"></div>
 
-                            <div className="flex flex-col md:flex-row justify-between items-start mb-16 relative z-10 w-full min-h-[160px] gap-8 md:gap-0">
-                                <CheckCircle2 className="w-12 h-12 text-purple-400 shrink-0" />
-
-                                <div className="w-full max-w-[280px] md:w-[280px] h-48 md:h-[220px] self-center md:self-auto rounded-2xl border border-white/10 bg-white/5 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl mt-4 md:mt-0 shrink-0">
+                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 relative z-10">
+                                <CheckCircle2 className="w-12 h-12 text-purple-400" />
+                                <div className="rounded-2xl overflow-hidden relative w-fit border border-white/5 shadow-2xl shrink-0">
                                     <Image
-                                        src="/assets/product/marks.png"
-                                        alt="Grades and Weightage Analysis"
-                                        fill
-                                        className="object-cover object-top scale-105 group-hover:scale-[1.15] transition-transform duration-500"
+                                        src="/assets/product/marks.webp"
+                                        alt="Marks Analysis Preview"
+                                        width={240}
+                                        height={160}
+                                        className="w-[200px] md:w-[240px] h-auto block rounded-2xl"
                                     />
                                 </div>
                             </div>
 
-                            <div className="relative z-10">
-                                <h3 className="text-3xl font-bold mb-3 tracking-tight">
+                            <div className="relative z-10 pt-8">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
                                     Marks & Grading Analysis.
                                 </h3>
-                                <p className="text-lg text-neutral-400 font-medium leading-relaxed">
+                                <p className="text-lg text-neutral-400 font-medium leading-relaxed max-w-2xl">
                                     Instantly see the exact marks needed in FAT
-                                    to pass each course. We break down
-                                    weightage, show what you've scored versus
-                                    what you've lost, and wrap it in a clean
-                                    semester overview.
+                                    to pass each course. We break down weightage
+                                    and what you've lost, all in a clean
+                                    overview.
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="mt-20 text-center w-full">
-                        <h3 className="text-3xl font-bold tracking-tight text-neutral-500">
-                            And much more.
-                        </h3>
+                        <div className="lg:col-span-2 bg-[#111] rounded-[2.5rem] p-8 md:p-10 border border-white/5 relative overflow-hidden group min-h-[380px] flex flex-col justify-between">
+                            <div className="absolute right-0 bottom-0 w-96 h-96 bg-blue-500/10 blur-[80px] rounded-full translate-x-1/2 translate-y-1/2 group-hover:bg-blue-500/20 transition-colors"></div>
+
+                            <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 relative z-10">
+                                <Settings2 className="w-12 h-12 text-blue-400" />
+                                <div className="rounded-2xl overflow-hidden relative w-fit border border-white/5 shadow-2xl shrink-0 bg-black/20 flex items-center justify-center p-2">
+                                    <Image
+                                        src="/assets/product/calendar.webp"
+                                        alt="Calendar Preview"
+                                        width={240}
+                                        height={160}
+                                        className="w-[200px] md:w-[240px] h-auto block rounded-2xl"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="relative z-10 pt-8">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">
+                                    Smart Calendar.
+                                </h3>
+                                <p className="text-lg text-neutral-400 font-medium leading-relaxed max-w-2xl">
+                                    Experience color-coded schedules and daily
+                                    highlight reminders for perfect time
+                                    management directly within VTOP.
+                                </p>
+                            </div>
+                        </div>
+
+                        <Link
+                            href="/how-to-use"
+                            className="bg-white/5 rounded-[2.5rem] p-8 md:p-10 flex flex-col justify-center items-center border border-white/10 group hover:bg-white/10 transition-all relative overflow-hidden text-center min-h-[440px]"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent"></div>
+                            <div className="bg-white/10 p-6 rounded-full group-hover:scale-110 transition-transform mb-6 relative z-10">
+                                <Zap className="w-12 h-12 text-indigo-400" />
+                            </div>
+                            <div className="relative z-10">
+                                <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight text-white group-hover:translate-x-1 transition-transform">
+                                    And much more.
+                                </h3>
+                                <p className="text-neutral-400 font-medium leading-relaxed">
+                                    Check out How to Use.
+                                </p>
+                            </div>
+                        </Link>
                     </div>
                 </section>
 
@@ -260,149 +247,6 @@ export default function Home() {
                     </h2>
                 </section>
             </main>
-
-            <footer className="w-full max-w-6xl mx-auto py-16 px-6 items-center justify-between gap-8">
-                <div className="flex flex-col md:flex-row items-start justify-between w-full mb-10 gap-10 md:gap-0">
-                    <div className="flex items-center gap-3">
-                        <div className="relative w-16 h-16 rounded-[14px] overflow-hidden shadow-sm border border-white/10">
-                            <Image
-                                src="/logo_main.jpeg"
-                                alt="VInhance Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:flex md:flex-row gap-x-8 gap-y-10 md:gap-20 text-left w-full md:w-auto mt-2 md:mt-0">
-                        <div className="flex flex-col gap-4 md:gap-5 text-sm font-medium text-neutral-500">
-                            <Link
-                                href={CHROME_WEBSTORE_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-white transition-colors"
-                            >
-                                Chrome Web Store
-                            </Link>
-                        </div>
-
-                        <div className="flex flex-col gap-4 md:gap-5 text-sm font-medium text-neutral-500">
-                            <Link
-                                href="/privacy-policy"
-                                className="hover:text-white transition-colors"
-                            >
-                                Privacy Policy
-                            </Link>
-                            <Link
-                                href="/terms-of-use"
-                                className="hover:text-white transition-colors"
-                            >
-                                Terms of Use
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="flex flex-col-reverse md:flex-row w-full justify-between items-center md:items-start mt-12 pt-8 border-t border-white/10 gap-10 md:gap-0">
-                    <div className="text-neutral-500 text-sm font-medium text-center md:text-left w-full md:w-auto mt-3">
-                        Not affiliated with VIT.
-                    </div>
-
-                    <div className="flex flex-col items-center md:items-end gap-2 md:gap-1 w-full md:w-auto">
-                        <div className="hidden md:flex flex-wrap justify-end items-center gap-2 text-lg font-medium text-neutral-400">
-                            <span>Made with love in Prayagraj,</span>
-                            <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-white/10 mx-1 shadow-lg bg-white/5 -rotate-6 hover:rotate-0 transition-transform duration-300">
-                                <Image
-                                    src="/assets/footer/prayagraj.jpg"
-                                    alt="Prayagraj Map"
-                                    fill
-                                    className="object-cover opacity-90 hover:opacity-100 transition-opacity"
-                                />
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                </div>
-                            </div>
-                            <span>Lucknow</span>
-                            <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-white/10 mx-1 shadow-lg bg-white/5 rotate-6 hover:rotate-0 transition-transform duration-300">
-                                <Image
-                                    src="/assets/footer/lucknow.jpg"
-                                    alt="Lucknow Map"
-                                    fill
-                                    className="object-cover opacity-90 hover:opacity-100 transition-opacity"
-                                />
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                </div>
-                            </div>
-                            <span>and Raiganj,</span>
-                            <div className="relative w-10 h-10 rounded-xl overflow-hidden border border-white/10 mx-1 shadow-lg bg-white/5 -rotate-6 hover:rotate-0 transition-transform duration-300">
-                                <Image
-                                    src="/assets/footer/raiganj.jpg"
-                                    alt="Raiganj Map"
-                                    fill
-                                    className="object-cover opacity-90 hover:opacity-100 transition-opacity"
-                                />
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="flex md:hidden flex-col items-center gap-5 w-full">
-                            <div className="flex items-center justify-center -space-x-2">
-                                <div className="relative w-16 h-16 rounded-[14px] overflow-hidden border-[2px] border-black shadow-lg bg-white/5 z-10 -rotate-3 hover:z-30 hover:rotate-0 transition-transform">
-                                    <Image
-                                        src="/assets/footer/prayagraj.jpg"
-                                        alt="Prayagraj Map"
-                                        fill
-                                        className="object-cover opacity-90"
-                                    />
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                    </div>
-                                </div>
-                                <div className="relative w-16 h-16 rounded-[14px] overflow-hidden border-[2px] border-black shadow-lg bg-white/5 z-20 hover:z-30 transition-transform">
-                                    <Image
-                                        src="/assets/footer/lucknow.jpg"
-                                        alt="Lucknow Map"
-                                        fill
-                                        className="object-cover opacity-90"
-                                    />
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                    </div>
-                                </div>
-                                <div className="relative w-16 h-16 rounded-[14px] overflow-hidden border-[2px] border-black shadow-lg bg-white/5 z-10 rotate-3 hover:z-30 hover:rotate-0 transition-transform">
-                                    <Image
-                                        src="/assets/footer/raiganj.jpg"
-                                        alt="Raiganj Map"
-                                        fill
-                                        className="object-cover opacity-90"
-                                    />
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-3 w-3 z-10">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0A84FF] opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-[#0A84FF] border-[1.5px] border-white shadow-sm"></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="text-center font-medium text-neutral-400 text-base leading-snug">
-                                Made with love in Prayagraj, Lucknow and
-                                Raiganj,
-                            </div>
-                        </div>
-
-                        <span className="text-sm font-medium text-neutral-500 text-center md:text-right md:mr-2 mt-1">
-                            for Chennai, Bhopal, Vellore, and AP.
-                        </span>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 }

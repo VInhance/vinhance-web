@@ -5,37 +5,7 @@ import { ArrowLeft } from "lucide-react";
 export default function TermsOfUse() {
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-white/20 pb-20 overflow-x-hidden">
-            <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                <header className="flex items-center justify-between px-4 md:px-6 h-[60px] bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-3xl shadow-2xl">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-8 h-8 rounded-[5px] overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow">
-                            <Image
-                                src="/logo_main.jpeg"
-                                alt="VInhance Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <span className="font-semibold text-lg tracking-tight">
-                            VInhance
-                        </span>
-                    </Link>
-
-                    <nav className="flex items-center gap-4 md:gap-8 text-sm font-medium text-neutral-400">
-                        <Link
-                            href="/privacy-policy"
-                            className="hover:text-white transition-colors"
-                        >
-                            Privacy
-                        </Link>
-                        <Link href="/terms-of-use" className="text-white">
-                            Terms
-                        </Link>
-                    </nav>
-                </header>
-            </div>
-
-            <main className="container mx-auto max-w-3xl pt-48 px-4">
+            <main className="container mx-auto max-w-4xl pt-32 md:pt-48 px-4 md:px-0">
                 <Link
                     href="/"
                     className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-12 font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 w-fit"
@@ -47,7 +17,7 @@ export default function TermsOfUse() {
                     Terms of Use.
                 </h1>
                 <p className="text-neutral-500 font-medium tracking-tight mb-16 text-lg">
-                    Last updated: February 28, 2026
+                    Last updated: March 19, 2026
                 </p>
 
                 <div className="space-y-16 text-neutral-400 leading-relaxed text-lg font-medium">
@@ -90,7 +60,7 @@ export default function TermsOfUse() {
                             3. Use Constraints
                         </h2>
                         <p>
-                            The tools, calculators, and syncing functions
+                            The tools, calculators, and automation functions
                             provided by VInhance are designed perfectly as
                             informational aids. However, they rely strictly on
                             the DOM structure and data provided by the official
@@ -146,13 +116,6 @@ export default function TermsOfUse() {
                     </section>
                 </div>
             </main>
-
-            <footer className="w-full max-w-3xl mx-auto py-16 px-6 border-t border-white/10 mt-32 flex justify-between items-center text-neutral-500 text-sm font-medium">
-                <p>Not affiliated with VIT.</p>
-                <Link href="/" className="hover:text-white transition-colors">
-                    Return home
-                </Link>
-            </footer>
         </div>
     );
 }

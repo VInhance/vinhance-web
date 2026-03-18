@@ -5,37 +5,7 @@ import { ArrowLeft } from "lucide-react";
 export default function PrivacyPolicy() {
     return (
         <div className="min-h-screen bg-black text-white font-sans selection:bg-white/20 pb-20 overflow-x-hidden">
-            <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
-                <header className="flex items-center justify-between px-4 md:px-6 h-[60px] bg-[#111111]/80 backdrop-blur-xl border border-white/10 rounded-full w-full max-w-3xl shadow-2xl">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-8 h-8 rounded-[5px] overflow-hidden shadow-[0_0_15px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-shadow">
-                            <Image
-                                src="/logo_main.jpeg"
-                                alt="VInhance Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <span className="font-semibold text-lg tracking-tight">
-                            VInhance
-                        </span>
-                    </Link>
-
-                    <nav className="flex items-center gap-4 md:gap-8 text-sm font-medium text-neutral-400">
-                        <Link href="/privacy-policy" className="text-white">
-                            Privacy
-                        </Link>
-                        <Link
-                            href="/terms-of-use"
-                            className="hover:text-white transition-colors"
-                        >
-                            Terms
-                        </Link>
-                    </nav>
-                </header>
-            </div>
-
-            <main className="container mx-auto max-w-3xl pt-48 px-4">
+            <main className="container mx-auto max-w-4xl pt-32 md:pt-48 px-4 md:px-0">
                 <Link
                     href="/"
                     className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors mb-12 font-medium bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 w-fit"
@@ -47,7 +17,7 @@ export default function PrivacyPolicy() {
                     Privacy Policy.
                 </h1>
                 <p className="text-neutral-500 font-medium tracking-tight mb-16 text-lg">
-                    Last updated: February 28, 2026
+                    Last updated: March 19, 2026
                 </p>
 
                 <div className="space-y-16 text-neutral-400 leading-relaxed text-lg font-medium">
@@ -66,7 +36,7 @@ export default function PrivacyPolicy() {
 
                     <section>
                         <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                            2. Local Processing of Data
+                            2. Data Security & Local Processing
                         </h2>
                         <p>
                             VInhance operates exclusively as a client-side
@@ -77,10 +47,10 @@ export default function PrivacyPolicy() {
                         <div className="mt-8 bg-[#111] border border-white/5 p-8 rounded-[2rem]">
                             <p className="text-neutral-200">
                                 <strong>
-                                    We do not run any remote servers, nor do we
-                                    collect, store, or transmit your VTOP
-                                    credentials, attendance records, grades, or
-                                    personal information.
+                                    We do not run any remote servers. Your VTOP
+                                    credentials, attendance records, grades, and
+                                    personal information are never transmitted
+                                    to us or any third-party services.
                                 </strong>
                             </p>
                         </div>
@@ -88,84 +58,49 @@ export default function PrivacyPolicy() {
 
                     <section>
                         <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                            3. Third-Party Services (Google Calendar
-                            integration)
+                            3. Permissions
                         </h2>
                         <p>
-                            If you choose to use the Calendar & Schedule
-                            Management sync features, our extension
-                            authenticates with your Google account using
-                            standard OAuth2 protocols provided by the Chrome
-                            Identity API.
-                        </p>
-                        <ul className="list-disc pl-6 mt-6 space-y-4">
-                            <li>
-                                We only request permissions necessary to insert
-                                events (classes, exams) into your Google
-                                Calendar.
-                            </li>
-                            <li>
-                                Authentication tokens remain securely stored
-                                within your local browser profile.
-                            </li>
-                            <li>
-                                We do not export or track your calendar events
-                                to any external databases.
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                            4. Permissions
-                        </h2>
-                        <p>
-                            VInhance requests certain browser permissions to
-                            function properly:
+                            VInhance requests limited permissions to ensure a
+                            seamless experience on VTOP portals:
                         </p>
                         <ul className="list-disc pl-6 mt-6 space-y-4">
                             <li>
                                 <strong className="text-white">
-                                    Host Permissions (Web History):
+                                    Host Permissions (VTOP Domains):
                                 </strong>{" "}
-                                Browsing history warnings appear because we
-                                redirect network requests to access specific
-                                VTOP pages (Timetable, Marks) to safely extract
-                                grades and class schedules. We only have access
-                                to VTOP domains.
+                                Allows the extension to read and modify content
+                                on official VIT domains to extract your
+                                timetable and grades for local display.
+                            </li>
+                            <li>
+                                <strong className="text-white">
+                                    WebRequest:
+                                </strong>{" "}
+                                Used to intercept network requests for the
+                                automated captcha solver and session management
+                                within VTOP.
                             </li>
                             <li>
                                 <strong className="text-white">
                                     Downloads:
                                 </strong>{" "}
-                                Used exclusively to intercept the downloads from
-                                VTOP (Syllabus, Assignments) and automatically
-                                rename them and place them into neatly organized
-                                folders.
+                                Required to automatically rename and organize
+                                your downloaded course materials and assignment
+                                files.
                             </li>
                             <li>
-                                <strong className="text-white">
-                                    Identity & Email:
-                                </strong>{" "}
-                                Required purely to authenticate you with Google
-                                for calendar sync features and briefly fetch
-                                your email to display a successful sign-in
-                                notification.
-                            </li>
-                            <li>
-                                <strong className="text-white">
-                                    Notifications:
-                                </strong>{" "}
-                                Used to display non-intrusive popup alerts when
-                                you successfully log in or log out of Google
-                                Calendar sync.
+                                <strong className="text-white">Storage:</strong>{" "}
+                                Used exclusively to save your local preferences,
+                                such as your privacy toggle state and dashboard
+                                settings.
                             </li>
                         </ul>
                     </section>
 
                     <section>
                         <h2 className="text-3xl font-bold text-white mb-6 tracking-tight">
-                            5. Revisions
+                            4. Revisions
                         </h2>
                         <p>
                             We may update this Privacy Policy from time to time
@@ -176,13 +111,6 @@ export default function PrivacyPolicy() {
                     </section>
                 </div>
             </main>
-
-            <footer className="w-full max-w-3xl mx-auto py-16 px-6 border-t border-white/10 mt-32 flex justify-between items-center text-neutral-500 text-sm font-medium">
-                <p>Not affiliated with VIT.</p>
-                <Link href="/" className="hover:text-white transition-colors">
-                    Return home
-                </Link>
-            </footer>
         </div>
     );
 }
