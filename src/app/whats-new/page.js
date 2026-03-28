@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Sparkles, Zap, Shield, Clock } from "lucide-react";
+import { ArrowLeft, Sparkles } from "lucide-react";
 
 export default function WhatsNew() {
     const updates = [
