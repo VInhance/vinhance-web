@@ -1,7 +1,7 @@
 <!-- README.md -->
 
 <p align="center">
-    <img src="assets/img/logo.png" height="75" width="75" />
+    <img src="public/logo.png" height="75" width="75" />
 </p>
 
 # VInhance
