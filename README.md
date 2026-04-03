@@ -127,7 +127,7 @@
 - **Calendar Filtering:** On the Academic Calendar page, use the **Course Filter** dropdown to highlight specific course classes. The **Reset** button appears when a course is selected for easy clearing. Toggle **"Show entries for today & onwards"** to focus on upcoming classes only.
 - **Privacy Controls:** The CGPA is automatically hidden on the home page for your privacy.
 - **Zero Manual Selection:** VInhance automatically detects your active semester and session; you don't need to manually select dropdowns for background features to work.
-- **LMS Support:** Open LMS directly from the VTOP navbar button and use the popup's **Dark Mode (LMS)** toggle on LMS pages.
+- **LMS Support:** Open LMS directly from the VTOP navbar button and use the popup's **Dark Mode** toggle on LMS pages.
 
 ---
 
@@ -153,7 +153,7 @@
   <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" alt="Opera" />
 </p>
 
-> ⚠️ Firefox is not supported.
+> Firefox support coming soon.
 
 ---
 
