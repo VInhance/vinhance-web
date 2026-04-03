@@ -1,7 +1,7 @@
 <!-- README.md -->
 
 <p align="center">
-    <img src="public/logo.png" height="75" width="75" />
+    <img src="assets/img/logo.png" height="75" width="75" />
 </p>
 
 # VInhance
@@ -9,7 +9,7 @@
 > Make VTOP useful.
 
 <p>
-    VInhance is a powerful Chrome extension designed to make VTOP more feature-rich for students across all VIT campuses. The extension provides insights on attendance, marks, and schedules directly to your browser.
+    VInhance is a powerful Chrome extension designed to make VTOP more feature-rich for students across all VIT campuses. The extension provides insights on attendance, marks, schedules, and your daily timetable directly in your browser.
 </p>
 
 <p>
@@ -31,8 +31,7 @@
 - **🧪 Lab vs Theory Differentiation:** Separate calculations for lab and theory classes.
 - **🧮 Advanced Attendance Calculators:** Dual-mode planning tools.
     - **Target % Calculator:** Set desired attendance percentage and get exact classes needed.
-    - **Future % Calculator:** Input classes to attend/skip and see projected percentage.
-    - Real-time validation with visual feedback and flexible planning scenarios.
+    - **Future % Calculator:** Real-time validation including intelligent lab-skip detection (warns and prevents skipping an odd number of lab slots).
 - **🕒 Last Posted Attendance:** Track latest attendance patterns.
     - Shows most recent attendance date for each course.
     - Displays last 3 statuses with color coding (P/Green, A/Red, O/Orange).
@@ -45,34 +44,64 @@
     - Real-time total counter.
 - **📈 Attendance Summary:** Statistics with skip calculations for targets (95%, 90%, 85%, 80%, 75%).
 - **👁️ Column Visibility Controls:** Customize table view with show/hide options.
+- **📤 Attendance Export Tools:** One-click copy to clipboard or CSV download for attendance tables.
+- **⚙️ Last Posted View Preference:** Choose compact or detailed Last Posted mode from the extension popup.
 
 ### 📈 Marks & Grades Analysis
 
 - **🙈 CGPA Privacy Toggle:** Hidden CGPA on the home page for privacy when opening VTOP in public!
-- **🏁 Passing Marks Calculator:** Shows exact marks needed in FAT to pass each course.
+    - **Click** to pin the CGPA visible, click again to hide.
+    - **Hover** to peek at the value temporarily — hides when the cursor leaves.
 - **⚖️ Weightage Analysis:** Display of total weightage, scored marks, and lost marks.
 - **📚 Course-wise Breakdown:** Individual analysis for Theory, Lab, and STS courses.
 - **🚦 Visual Indicators:** Color-coded status (🟢 Pass, 🔴 Need more marks).
 - **📋 Comprehensive Academic Summary:** Complete semester overview with all courses in a single table.
     - Course codes, titles, and percentages with proper decimal formatting.
     - Enhanced compatibility across all VIT campuses.
+- **🎨 Grade History Coloring:** Color-coded grade rows across the Grade History and Grades pages for instant readability.
 - **📥 Export Options:** Copy to clipboard or download as CSV with one-click buttons.
-- **✨ Enhanced Visuals:** Improved backgrounds for percent and weight columns for better readability.
-- **⚡ Performance Optimization:** Faster page loads and smoother interactions.
+- **☑️ Include NGC Toggle:** Clean, compact checkbox to include/exclude NGC (non-graded courses) in grade calculations.
 
-### 📅 Calendar & Schedule Management
+### 📅 Calendar, Schedule & Dashboard
 
-- **🗓️ Exam Schedule Sync:** Sync exam dates and venues to your calendar.
+- **📋 Today's Schedule Dashboard:** A personalized schedule widget on the VTOP home page.
+    - Greets you by name with Good morning/afternoon/evening.
+    - Shows today's classes with course name, venue, slot, and time.
+    - **🔴 Live indicator:** Blinking red dot for the class currently in session.
+    - **✅ Completed indicator:** Checkmark with faded opacity for classes that have ended.
+    - **⏳ Smart Time Remaining:** Dynamic time tags (`1h`, `2h` for >1hr, `50m`, `5m` for <1hr) directly next to course titles, with an hourglass icon for upcoming classes.
+    - **🔄 Refresh button:** One-click refresh to re-fetch and update the entire dashboard.
+    - **📅 Day Order detection:** Automatically detects "Tuesday Day Order" or similar from the academic calendar and shows the correct schedule.
+    - Handles holidays, exams, and special events with contextual messages.
+    - Lab classes with consecutive slots are automatically compressed into a single row.
 - **🎨 Enhanced Styling:** Color-coded calendar (🟢 classes, 🔴 holidays, 🟠 exams).
 - **📍 Today Highlighting:** Current date automatically highlighted in calendar view.
 - **🖌️ Timetable Cell Coloring:** Visual coloring for courses, lunch breaks, and more.
+- **🎯 Smart Calendar Filtering:** Advanced course-specific calendar filtering with intelligent controls.
+    - **📚 Course Filter Dropdown:** Select any course to highlight only that course's classes in the calendar.
+    - **📅 Date Range Toggle:** "Show entries for today & onwards" checkbox to focus on upcoming classes.
+    - **📊 Live Counter:** Dynamic counter showing filtered results (e.g., "5 classes left this month") using precise lab-session counting and robust academic holiday/exam skip detection.
 
 ### 🎯 Enhanced Navigation & UI
 
-- **⚡ Quick Access Toolbar:** One-click access to Attendance, Marks, Course Page, and Time Table.
+- **📅 Auto Semester Selection:** Zero manual selection required.
+    - Automatically discovers and selects your most recent academic semester for all background data syncs.
+    - Seamlessly switches between sessions (Winter/Summer/Fall) based on your portal activity.
 - **🌌 Modern Styling:** Dark gradient navbar with consistent fonts (Inter, Open Sans).
-- **🤖 Auto-captcha Solving:** Automatically solves VTOPCC captcha challenges.
-- **📱 Responsive Design:** Optimized for all screen sizes and campuses.
+- **🌙 Dark Mode:** One-click dark mode toggle for comfortable viewing.
+- **🌙 Chennai LMS Dark Mode:** Dedicated dark mode toggle for Chennai LMS pages.
+- **🤖 Auto-captcha Solving:** Automatically solves captcha challenges.
+- **🚀 Quick Navbar Shortcuts:** Instant buttons for Attendance, Marks, Calendar, Course Page, Time Table, and LMS.
+
+### 🎨 Customizable Portal Colors
+
+- **🖌️ Primary Color Customization:** Change portal navigation, headers, and accents from default black to any color.
+    - 5 built-in presets (Black, Red, Pink, Green, Yellow).
+    - Custom color picker for unlimited color choice.
+    - Live preview updates across all pages without reload.
+- **⭐ Accent Color Customization:** Independently change accent colors (buttons, highlights) from default green.
+    - 5 built-in accent presets (Green, Rose, Violet, Cyan, Amber).
+    - Custom color picker for any accent shade.
 
 ### 📚 Course & Leave Management
 
@@ -94,9 +123,11 @@
 ## 🚀 Usage
 
 - **Attendance Management:** Navigate to "Class Attendance" in VTOP to view the enhanced table with calculators. Use **Future % Calculator** to project attendance, **Target % Calculator** to find classes needed, and click **Check OD** for a comprehensive summary. Toggle column visibility using Show/Hide controls.
-- **Marks Analysis:** Visit "Marks View" in VTOP for the enhanced marks table showing passing requirements, weightage analysis, and color-coded indicators.
-- **Calendar Sync:** Use the extension popup to sign in to Google, then navigate to Exam Schedule in VTOP to sync events.
+- **Marks Analysis:** Visit "Marks View" in VTOP for the enhanced marks table showing passing requirements, weightage analysis, and color-coded indicators. Use the **Include NGC** checkbox to include/exclude non-graded courses.
+- **Calendar Filtering:** On the Academic Calendar page, use the **Course Filter** dropdown to highlight specific course classes. The **Reset** button appears when a course is selected for easy clearing. Toggle **"Show entries for today & onwards"** to focus on upcoming classes only.
 - **Privacy Controls:** The CGPA is automatically hidden on the home page for your privacy.
+- **Zero Manual Selection:** VInhance automatically detects your active semester and session; you don't need to manually select dropdowns for background features to work.
+- **LMS Support:** Open LMS directly from the VTOP navbar button and use the popup's **Dark Mode (LMS)** toggle on LMS pages.
 
 ---
 
@@ -115,8 +146,6 @@
 
 ## 🌐 Compatible Browsers
 
-VInhance is built for Chromium-based browsers. It works perfectly on:
-
 <p>
   <img src="https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white" alt="Chrome" />
   <img src="https://img.shields.io/badge/Brave-FB542B?style=for-the-badge&logo=Brave&logoColor=white" alt="Brave" />
@@ -124,7 +153,7 @@ VInhance is built for Chromium-based browsers. It works perfectly on:
   <img src="https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white" alt="Opera" />
 </p>
 
-> ⚠️ Mozilla Firefox and Apple Safari are not supported because they use different extension systems.
+> ⚠️ Firefox is not supported.
 
 ---
 
@@ -133,7 +162,6 @@ VInhance is built for Chromium-based browsers. It works perfectly on:
 | Issue                                 | Solution                                                                                                                        |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | **Extension isn't loading**           | Refresh the VTOP page. Check if you're on a supported campus URL and ensure the extension is enabled in `chrome://extensions/`. |
-| **Exam Calendar Sync fails**          | Open the extension popup, sign out and sign back in to Google. Check your Chrome calendar permissions and internet connection.  |
 | **Incorrect Attendance calculations** | Refresh the attendance page, confirm you're viewing the correct semester, and ensure all attendance data has fully loaded.      |
 
 > Most of the issues should get fixed upon refreshing.

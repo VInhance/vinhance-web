@@ -35,11 +35,18 @@ export default function HowToUse() {
             ),
         },
         {
-            title: "Refined UI & Font Style",
+            title: "Refined Dashboard & Smart Schedule",
             description:
-                "Experience VTOP like never before with a modern, high-contrast dark theme and refined typography that makes navigation effortless.",
+                "Experience VTOP like never before with a clean, modern layout and refined typography. Enjoy a completely overhauled live dashboard schedule widget featuring dynamic time-left tags and intelligent holiday awareness.",
             icon: <Palette className="w-8 h-8 text-purple-400" />,
             image: "/assets/product/home.webp",
+        },
+        {
+            title: "Customization & Auto-Semester",
+            description:
+                "Use the VInhance popup to toggle universal Dark Mode across VTOP and LMS, personalize the portal with your favorite accent colors, and enable zero-click automatic active semester detection.",
+            icon: <Settings className="w-8 h-8 text-cyan-400" />,
+            image: "/assets/product/popup.webp",
         },
         {
             title: "Log in to VTOP",
@@ -135,7 +142,7 @@ export default function HowToUse() {
                                     {step.action}
                                 </div>
                                 {step.image && (
-                                    <div className="rounded-[10px] bg-white border border-white/5 overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
+                                    <div className="rounded-[10px] bg-[#111] border border-neutral-800 overflow-hidden shadow-2xl group-hover:scale-[1.01] transition-transform duration-500">
                                         <Image
                                             src={step.image}
                                             alt={step.title}

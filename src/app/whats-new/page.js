@@ -5,7 +5,24 @@ import { ArrowLeft, Sparkles, Zap, Shield, Clock } from "lucide-react";
 export default function WhatsNew() {
     const updates = [
         {
+            version: "v2.0",
+            status: "review",
+            description:
+                "A massive visual and functional overhaul introducing full portal customization, a live dashboard schedule widget.",
+            icon: <Zap className="w-6 h-6 text-amber-400" />,
+            features: [
+                "Full Portal Customization (Themes & Accent Colors)",
+                "Universal VTOP & LMS Dark Mode",
+                "Live Dashboard Schedule Widget with Dynamic Time Tags",
+                "Advanced Course-Specific Calendar Filter & Live Counter",
+                "Intelligent Lab-Skip Validation in Attendance Planner",
+                "Zero-click Automatic Active Semester Detection",
+                "Various Bugfixes and Performance Improvements",
+            ],
+        },
+        {
             version: "v1.0",
+            status: "live",
             description:
                 "A comprehensive tool built specifically for VIT campuses, bringing every essential dashboard directly to your browser.",
             icon: <Sparkles className="w-6 h-6 text-indigo-400" />,
@@ -52,12 +69,14 @@ export default function WhatsNew() {
                             key={idx}
                             className="relative pl-0 md:pl-12 ml-0 md:ml-4 md:border-l border-white/10 pb-12 last:pb-0"
                         >
-                            <div className="hidden md:block absolute left-[-9px] top-0 w-[18px] h-[18px] bg-black border-2 border-indigo-500 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.5)]"></div>
+                            <div
+                                className={`hidden md:block absolute left-[-9px] top-0 w-[18px] h-[18px] bg-black border-2 rounded-full ${update.version === "v2.0" ? "border-amber-400 shadow-[0_0_10px_rgba(251,191,36,0.5)]" : "border-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.5)]"}`}
+                            ></div>
 
                             <div className="flex flex-col gap-6 bg-[#111] border border-white/5 p-8 rounded-[2.5rem] hover:bg-[#161616] transition-colors group">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-4">
-                                        <div className="p-3 bg-white/5 rounded-2xl border border-white/10">
+                                        <div className="p-3 bg-white/5 rounded-full border border-white/10">
                                             {update.icon}
                                         </div>
                                         <div>
@@ -66,15 +85,27 @@ export default function WhatsNew() {
                                             </h2>
                                         </div>
                                     </div>
-                                    <div className="flex items-center gap-2 px-4 pr-3.5 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                                        </span>
-                                        <span className="text-emerald-400 text-sm font-bold">
-                                            Live
-                                        </span>
-                                    </div>
+                                    {update.status === "review" ? (
+                                        <div className="flex items-center gap-2 px-4 pr-3.5 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full">
+                                            <span className="relative flex h-2 w-2">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                                            </span>
+                                            <span className="text-amber-400 text-sm font-bold">
+                                                Coming Soon
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <div className="flex items-center gap-2 px-4 pr-3.5 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+                                            <span className="relative flex h-2 w-2">
+                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                                            </span>
+                                            <span className="text-emerald-400 text-sm font-bold">
+                                                Live
+                                            </span>
+                                        </div>
+                                    )}
                                 </div>
 
                                 <p className="text-neutral-400 leading-relaxed text-lg font-medium">
@@ -85,10 +116,12 @@ export default function WhatsNew() {
                                     {update.features.map((feature, fIdx) => (
                                         <div
                                             key={fIdx}
-                                            className="flex items-center gap-3 text-neutral-300"
+                                            className="flex items-start gap-3 text-neutral-300"
                                         >
-                                            <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
-                                            <span className="font-medium">
+                                            <div
+                                                className={`shrink-0 mt-2.5 w-1.5 h-1.5 rounded-full ${update.version === "v2.0" ? "bg-amber-400" : "bg-indigo-500"}`}
+                                            ></div>
+                                            <span className="font-medium leading-relaxed">
                                                 {feature}
                                             </span>
                                         </div>
