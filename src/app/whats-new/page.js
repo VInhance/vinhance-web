@@ -6,7 +6,7 @@ export default function WhatsNew() {
     const updates = [
         {
             version: "v2.0",
-            status: "review",
+            status: "live",
             description:
                 "A massive visual and functional overhaul introducing full portal customization, a live dashboard schedule widget.",
             icon: <Zap className="w-6 h-6 text-amber-400" />,
