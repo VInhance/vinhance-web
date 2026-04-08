@@ -12,7 +12,7 @@ export default function WhatsNew() {
             icon: <Zap className="w-6 h-6" />,
             features: [
                 "Full Portal Customization (Themes & Accent Colors)",
-                "Universal VTOP & LMS Dark Mode",
+                "Universal VTOP & LMS Dark Mode (Beta)",
                 "Live Dashboard Schedule Widget with Dynamic Time Tags",
                 "Advanced Course-Specific Calendar Filter & Live Counter",
                 "Intelligent Lab-Skip Validation in Attendance Planner",

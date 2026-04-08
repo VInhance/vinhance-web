@@ -44,7 +44,7 @@ export default function HowToUse() {
         {
             title: "Customization & Auto-Semester",
             description:
-                "Use the VInhance popup to toggle universal Dark Mode across VTOP and LMS, personalize the portal with your favorite accent colors, and enable zero-click automatic active semester detection.",
+                "Use the VInhance popup to toggle universal Dark Mode (Beta) across VTOP and LMS, personalize the portal with your favorite accent colors, and enable zero-click automatic active semester detection.",
             icon: <Settings className="w-8 h-8 text-cyan-400" />,
             image: "/assets/product/popup.webp",
         },
